@@ -1,7 +1,7 @@
 var config = {
     map: {
         "*": {
-            alias: "CustomMax_main-page-popup/js/myscript"
+            CustomMax: "CustomMax_main-page-popup/js/myscript"
         }
     }
 };

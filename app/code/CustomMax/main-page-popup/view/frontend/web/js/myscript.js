@@ -14,7 +14,7 @@ define (['jquery'],function($) {
         else if (localStorage.getItem('modalVisibilityData') == 'visible'){
             toggleModalClass('hidden');
         }else if (localStorage.getItem('modalVisibilityData') == 'invisible'){
-            $('.cms-index-index').first().css('overflow', "visible");
+            $('.cms-index-index').css('overflow', "visible");
         }
 
         $('#button-cancel-modal-fever').click(function () {
@@ -27,9 +27,16 @@ define (['jquery'],function($) {
             event.preventDefault();
             toggleModalClass('visible');
         });
+        /**
+         * Toggle visibility class in modal window and body overflow on main page.
+         * @access public
+         * @type {function}
+         * @param {string|Array} [Option of CSS overflow parameter]
+         * @return void
+         */
         function toggleModalClass(visibility) {
             $('.main-page-modal-container').first().toggleClass('modal-display-block');
-            $('.cms-index-index').first().css('overflow', visibility);
+            $('.cms-index-index').css('overflow', visibility);
         }
     }
 });
